@@ -2,6 +2,16 @@
   "expo": {
     "name": "AuthSocial",
     "slug": "AuthSocial",
+    "plugins": [
+      [
+        "react-native-fbsdk-next",
+        {
+          "appID": "760852968813017",
+          "clientToken": "2a4707b0fb9f61383d4197b158559b7c",
+          "displayName": "AuthSocial"
+        }
+      ]
+    ],
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -21,10 +31,16 @@
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#ffffff"
-      }
+      },
+      "package": "com.rae62.AuthSocial"
     },
     "web": {
       "favicon": "./assets/favicon.png"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "c8d9f96d-dc3f-43be-8dad-ccc5d707021e"
+      }
     }
   }
 }
