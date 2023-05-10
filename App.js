@@ -20,15 +20,14 @@ export default function App() {
 
   const signInWithFB = async () => {
     try {
-      await LoginManager.logInWithPermissions(['public-profile', 'email']);
+      await LoginManager.logInWithPermissions(['public_profile', 'email']);
       const data = await AccessToken.getCurrentAccessToken();
       if(!data) {
         return;
       }
       const facebookCredential = FacebookAuthProvider.credential(data.accessToken);
       const auth = getAuth();
-      const response = 
-      await signInWithCredential(firebase.auth(), facebookCredential);
+      const response = await signInWithCredential(firebase.auth(), facebookCredential);
       console.log(response);
     } catch(e) {
       console.log(e);
